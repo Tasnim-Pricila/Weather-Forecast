@@ -6,10 +6,39 @@
 body{
     box-sizing: border-box;
 }
+p{
+    margin-bottom: 0.5rem;
+}
 
+.search-btn{
+    border: 3px solid rgb(33, 144, 209);
+    background-color: white;
+    font-weight: bold;
+}
+.search-btn:hover{
+    background-color: rgb(76, 131, 212);
+    border: 3px solid rgb(33, 144, 209);
+}
+
+.temp{
+    font-weight: 700;
+    color: rgb(123, 188, 231);
+}
 .weather{
     background: url('../images/bg-image.jpg');
-    height: 100vh;
+    height: 200vh;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: rgb(46, 45, 45);
+    background-blend-mode: overlay;
+}
+.sun{
+    padding-right: 130px;
+    padding-left: 130px;
+}
+.sunrise, .sunset{
+    color: rgb(201, 245, 5);
+}
+.weather-details{
+    background-color: rgba(93, 94, 95, 0.39);
 }

@@ -16,19 +16,60 @@
         <div class="container">
             <form class="col-md-6 m-auto py-5">
                 <div class="input-group mb-3">
-                    <input id="city-name" type="text" class="form-control" placeholder="Enter a location Name for Weather...">
+                    <input id="city-name" type="text" class="form-control search-input" placeholder="Enter a location Name for Weather...">
                     <div class="input-group-append">
-                        <button onclick="loadByCityName()" type="button" class="btn btn-danger">Search</button>
+                        <button onclick="loadByCityName()" type="button" class="search-btn px-4">Search</button>
                     </div>
                 </div>
             </form>
             <!-- Weather Shown Area  -->
-            <div class="weather-status text-white text-center">
+             <!-- City NAme, Temp, Icon  -->
+            <div class="weather-status text-white text-center">               
+                <h1 id="city" class="text-uppercase">DHAKA</h1>
+                <h3 class="display-1 temp"><span id="temperature">38.06</span>&deg;C</h3>
+                <h4 id="condition">Clouds</h5>
                 <img id="weather-icon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
-                <h1 id="city">Dhaka</h1>
-                <h3><span id="temperature">38.06</span>&deg;C</h3>
-                <h5 id="condition">Clouds</h5>
             </div>
+            <div class="row sun my-4">
+                <div class="col-md-8 mx-auto">
+                    <div class="d-flex justify-content-between w-100">
+                        <p class="sunrise"><b>Sunrise: </b><span id="sunrise">06:20</span> am</p>
+                        <p class="sunset"> <b>Sunset: </b><span id="sunset">06:05</span> pm</p>
+                    </div> 
+                </div>              
+            </div>
+            <!-- Weather Details  -->
+            <div class="row text-white mt-3">
+                <div class="col-md-8 mx-auto py-3 rounded rounded-3 weather-details">
+                    <!-- Sunrise & Sunset  -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column align-items-center">
+                                <p>Feels Like</p>
+                                <h3><span id="feels-like">38.06</span> &deg;C</h3>
+                                <p class="mt-4">Maximum Temperature</p>
+                                <h3><span id="max-temp">38.06</span> &deg;C</h3>
+                                <p class="mt-4">Min Temperature</p>
+                                <h3><span id="min-temp">38.06</span> &deg;C</h3>
+                                <p class="mt-4">Cloudiness</p>
+                                <h3><span id="cloudiness">9</span> &percnt;</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column align-items-center">
+                                <p>Humidity</p>
+                                <h3><span id="humidity">38.06</span> &percnt;</h3>
+                                <p class="mt-4">Pressure</p>
+                                <h3><span id="pressure">38.06</span> hPa</h3>
+                                <p class="mt-4">Wind Speed</p>
+                                <h3><span id="wind-speed">38.06</span> m/s</h3>
+                                <p class="mt-4">Sea Level</p>
+                                <h3><span id="sea-level">1011</span> hPa</h3>
+                            </div>
+                        </div>                       
+                    </div>                   
+                </div>
+            </div>         
         </div>
     </div>
 
